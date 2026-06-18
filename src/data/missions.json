@@ -1,0 +1,123 @@
+[
+  {
+    "id": "mision-001",
+    "title": "Misión en Chiapas — Familia García",
+    "summary": "La familia García lleva el carisma del PAC a las comunidades indígenas de Chiapas, México. Acompañan matrimonios, forman catequistas y celebran retiros en zonas rurales.",
+    "sourceUrl": "https://proyectoamorconyugal.es/misiones-y-noticias/",
+    "date": "2024-09-01",
+    "category": "mision-activa",
+    "tags": ["mexico", "chiapas", "indigena", "mision", "familia"],
+    "coupleNames": "María y José García",
+    "story": "José y María sintieron el llamado a la misión después de 15 años de matrimonio y 5 años de servicio en el equipo de retiros de PAC en España. En 2024, se mudaron con sus tres hijos a San Cristóbal de las Casas, Chiapas, para establecer una base misionera del PAC en México. \n\nSu trabajo incluye visitar comunidades indígenas para ofrecer retiros de matrimonios adaptados a la cultura local, formar catequistas matrimoniales, coordinar la adoración eucarística por los matrimonios y acompañar a parejas en crisis. Han desarrollado materiales de formación en tsotsil y tseltal, las lenguas indígenas locales. \n\nEn su primer año, han acompañado a más de 60 parejas en retiros y han formado a 15 matrimonios como líderes locales que continúan el trabajo en sus comunidades.",
+    "location": {
+      "country": "México",
+      "region": "Chiapas",
+      "coordinates": { "lat": 16.7370, "lng": -92.6376 }
+    },
+    "photoUrls": [
+      "/images/missions/chiapas-1.jpg",
+      "/images/missions/chiapas-2.jpg",
+      "/images/missions/chiapas-3.jpg"
+    ],
+    "prayerRequest": "Por los matrimonios de las comunidades indígenas, para que el mensaje del amor cristiano llegue a ellos en su propia lengua y cultura. Por los hijos de los misioneros, para que se adapten y crezcan en este servicio.",
+    "supporters": 147,
+    "dateStarted": "2024-09-01",
+    "active": true
+  },
+  {
+    "id": "mision-002",
+    "title": "Misión en Honduras — Centroamérica",
+    "summary": "La misión en Honduras lleva retiros y formación conyugal a las zonas más necesitadas del país, con especial atención a la reconstrucción del tejido familiar.",
+    "sourceUrl": "https://proyectoamorconyugal.es/misiones-y-noticias/",
+    "date": "2025-01-15",
+    "category": "mision-activa",
+    "tags": ["honduras", "centroamerica", "retiros", "familia"],
+    "coupleNames": "Nunchy y Arturo",
+    "story": "Después de que Dios sanara su matrimonio, Nunchy y Arturo sintieron el llamado a compartir lo que habían recibido. Se unieron al equipo misionero del PAC y desde 2025 están establecidos en Tegucigalpa, Honduras. \n\nSu misión se centra en retiros de fin de semana para matrimonios en zonas rurales y urbanas, formación de líderes matrimoniales locales, y programas de acompañamiento para parejas en situación de vulnerabilidad. Han desarrollado una metodología adaptada al contexto centroamericano que integra la espiritualidad conyugal con las realidades sociales de la región. \n\nColaboran estrechamente con las diócesis locales y han establecido una red de oración que conecta a matrimonios de toda Centroamérica.",
+    "location": {
+      "country": "Honduras",
+      "region": "Tegucigalpa y zonas rurales",
+      "coordinates": { "lat": 14.0723, "lng": -87.1921 }
+    },
+    "photoUrls": [
+      "/images/missions/honduras-1.jpg",
+      "/images/missions/honduras-2.jpg"
+    ],
+    "prayerRequest": "Por la paz y la seguridad en Honduras, para que las familias puedan vivir y crecer en un entorno de paz. Por los matrimonios que atendemos, para que encuentren en Cristo la fuerza para perseverar.",
+    "supporters": 98,
+    "dateStarted": "2025-01-15",
+    "active": true
+  },
+  {
+    "id": "mision-003",
+    "title": "Misión en Polonia — Puente con Europa del Este",
+    "summary": "El PAC extiende su carisma a Polonia, trabajando con comunidades católicas locales para llevar la espiritualidad conyugal a Europa del Este.",
+    "sourceUrl": "https://proyectoamorconyugal.es/misiones-y-noticias/",
+    "date": "2025-06-01",
+    "category": "mision-activa",
+    "tags": ["polonia", "europa-del-este", "internacional"],
+    "coupleNames": "Marta y Tomasz Nowak",
+    "story": "Marta y Tomasz, un matrimonio polaco-español, sirven como puente entre el PAC y las comunidades católicas de Polonia y Europa del Este. Con base en Cracovia, coordinan retiros para matrimonios polacos, traducen materiales de formación al polaco y organizan peregrinaciones conyugales a santuarios marianos. \n\nPolonia tiene una fuerte tradición católica, pero la espiritualidad conyugal específica del PAC es nueva. Marta y Tomasz están construyendo puentes entre la rica tradición polaca de Juan Pablo II y la metodología del Proyecto Amor Conyugal. Han organizado ya tres retiros bilingües y están formando un equipo local de matrimonios líderes.",
+    "location": {
+      "country": "Polonia",
+      "region": "Cracovia y Varsovia",
+      "coordinates": { "lat": 50.0647, "lng": 19.9450 }
+    },
+    "photoUrls": [
+      "/images/missions/polonia-1.jpg",
+      "/images/missions/polonia-2.jpg"
+    ],
+    "prayerRequest": "Por la unidad entre las comunidades católicas de Europa del Este y del Oeste. Por los matrimonios polacos, para que redescubran la belleza de su vocación.",
+    "supporters": 65,
+    "dateStarted": "2025-06-01",
+    "active": true
+  },
+  {
+    "id": "mision-004",
+    "title": "Misión en Guinea Ecuatorial",
+    "summary": "Llevando el Evangelio del matrimonio a África Occidental. Retiros, formación de catequistas y acompañamiento pastoral en Malabo y Bata.",
+    "sourceUrl": "https://proyectoamorconyugal.es/misiones-y-noticias/",
+    "date": "2025-09-01",
+    "category": "mision-reciente",
+    "tags": ["africa", "guinea-ecuatorial", "mision", "formacion"],
+    "coupleNames": "Álvaro y Elena",
+    "story": "Álvaro y Elena llegaron a Malabo en septiembre de 2025 con el encargo del PAC de establecer una presencia en África. Guinea Ecuatorial, siendo el único país africano de habla hispana, era el punto de entrada natural. \n\nTrabajan con la diócesis de Malabo y Bata, ofreciendo retiros de matrimonios y formación para agentes de pastoral familiar. Han encontrado una gran acogida y una profunda sed de formación matrimonial. La poligamia y las estructuras familiares tradicionales presentan desafíos particulares que requieren un enfoque pastoral sensible y arraigado en la doctrina de la Iglesia.",
+    "location": {
+      "country": "Guinea Ecuatorial",
+      "region": "Malabo y Bata",
+      "coordinates": { "lat": 3.7500, "lng": 8.7833 }
+    },
+    "photoUrls": [
+      "/images/missions/guinea-1.jpg"
+    ],
+    "prayerRequest": "Por la evangelización de las familias en África, para que el mensaje del amor cristiano transforme las estructuras familiares tradicionales desde dentro. Por la salud y la fuerza de los misioneros.",
+    "supporters": 42,
+    "dateStarted": "2025-09-01",
+    "active": true
+  },
+  {
+    "id": "mision-005",
+    "title": "Misión en Estados Unidos — Indiana",
+    "summary": "El PAC llega a Estados Unidos con retiros para la comunidad hispana. Una misión enfocada en servir a las familias inmigrantes.",
+    "sourceUrl": "https://proyectoamorconyugal.es/misiones-y-noticias/",
+    "date": "2026-05-10",
+    "category": "mision-reciente",
+    "tags": ["usa", "indiana", "hispanos", "inmigrantes"],
+    "coupleNames": "Equipo Misionero PAC USA",
+    "story": "Un equipo de matrimonios misioneros del PAC viajó a Indiana en mayo de 2026 para ofrecer retiros a la comunidad hispana. La misión incluyó retiros en Indianapolis, Fort Wayne y South Bend, con una participación total de más de 40 parejas. \n\nLa realidad de las familias inmigrantes hispanas en Estados Unidos presenta desafíos específicos: la separación familiar, la presión cultural, el idioma, la situación migratoria. Los retiros se ofrecieron en español y se adaptaron a esta realidad particular. El éxito de esta misión ha abierto la puerta a una presencia más permanente del PAC en Estados Unidos.",
+    "location": {
+      "country": "Estados Unidos",
+      "region": "Indiana",
+      "coordinates": { "lat": 39.7684, "lng": -86.1580 }
+    },
+    "photoUrls": [
+      "/images/missions/indiana-1.jpg",
+      "/images/missions/indiana-2.jpg",
+      "/images/missions/indiana-3.jpg"
+    ],
+    "prayerRequest": "Por las familias inmigrantes hispanas en Estados Unidos, para que encuentren en su fe y en su matrimonio la fuerza para afrontar los desafíos de la emigración.",
+    "supporters": 53,
+    "dateStarted": "2026-05-10",
+    "active": true
+  }
+]

@@ -1,0 +1,151 @@
+{
+  "siteLinks": [
+    {
+      "id": "nav-evangelio",
+      "label": "Evangelio",
+      "href": "/evangelio",
+      "group": "header",
+      "order": 1,
+      "icon": "book-open"
+    },
+    {
+      "id": "nav-retiros",
+      "label": "Retiros",
+      "href": "/retiros",
+      "group": "header",
+      "order": 2,
+      "icon": "calendar"
+    },
+    {
+      "id": "nav-formacion",
+      "label": "Formación",
+      "href": "/formacion",
+      "group": "header",
+      "order": 3,
+      "icon": "graduation-cap"
+    },
+    {
+      "id": "nav-testimonios",
+      "label": "Testimonios",
+      "href": "/testimonios",
+      "group": "header",
+      "order": 4,
+      "icon": "heart"
+    },
+    {
+      "id": "nav-misiones",
+      "label": "Misiones",
+      "href": "/misiones",
+      "group": "header",
+      "order": 5,
+      "icon": "globe"
+    },
+    {
+      "id": "nav-itinerario",
+      "label": "Itinerario",
+      "href": "/itinerario",
+      "group": "header",
+      "order": 6,
+      "icon": "map"
+    },
+    {
+      "id": "footer-evangelio",
+      "label": "Evangelio del Día",
+      "href": "/evangelio",
+      "group": "footer",
+      "order": 1
+    },
+    {
+      "id": "footer-retiros",
+      "label": "Retiros",
+      "href": "/retiros",
+      "group": "footer",
+      "order": 2
+    },
+    {
+      "id": "footer-formacion",
+      "label": "Formación",
+      "href": "/formacion",
+      "group": "footer",
+      "order": 3
+    },
+    {
+      "id": "footer-itinerario",
+      "label": "Itinerario Matrimonial",
+      "href": "/itinerario",
+      "group": "footer",
+      "order": 4
+    },
+    {
+      "id": "footer-testimonios",
+      "label": "Testimonios",
+      "href": "/testimonios",
+      "group": "footer",
+      "order": 5
+    },
+    {
+      "id": "footer-misiones",
+      "label": "Misiones",
+      "href": "/misiones",
+      "group": "footer",
+      "order": 6
+    },
+    {
+      "id": "footer-contacto",
+      "label": "Contacto",
+      "href": "/contacto",
+      "group": "footer",
+      "order": 7
+    },
+    {
+      "id": "footer-acerca",
+      "label": "Acerca de",
+      "href": "/acerca",
+      "group": "footer",
+      "order": 8
+    },
+    {
+      "id": "footer-legal",
+      "label": "Aviso Legal",
+      "href": "/legal",
+      "group": "footer",
+      "order": 9
+    },
+    {
+      "id": "footer-privacidad",
+      "label": "Privacidad",
+      "href": "/legal/privacidad",
+      "group": "footer",
+      "order": 10
+    },
+    {
+      "id": "footer-cookies",
+      "label": "Cookies",
+      "href": "/legal/cookies",
+      "group": "footer",
+      "order": 11
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "facebook",
+      "url": "https://facebook.com/amaadios",
+      "label": "Facebook — Ama a Dios"
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/amaadios",
+      "label": "Instagram — @amaadios"
+    },
+    {
+      "platform": "youtube",
+      "url": "https://youtube.com/@amaadios",
+      "label": "YouTube — Ama a Dios"
+    },
+    {
+      "platform": "whatsapp",
+      "url": "https://wa.me/1234567890",
+      "label": "WhatsApp — Evangelio Diario"
+    }
+  ]
+}
