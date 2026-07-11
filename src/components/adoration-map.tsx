@@ -43,15 +43,15 @@ export function AdorationMap({ places }: { places: Place[] }) {
   const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${selected.parish}, ${selected.city}`)}`;
   if (!token) return <div className="rounded-[2rem] border border-[#e4dbd0] bg-[#fffdf9] p-6 text-sm text-[#5e6a63]">El mapa se está preparando. Mientras tanto, consulta las adoraciones por ciudad más abajo.</div>;
   return <div className="overflow-hidden rounded-[2rem] border border-[#e4dbd0] bg-[#fffdf9] shadow-sm">
-    <div className="grid lg:grid-cols-[1fr_19rem]">
-      <div ref={node} className="h-[26rem] min-h-[60vh]" aria-label="Mapa interactivo de adoraciones" />
-      <aside className="flex min-h-[60vh] flex-col border-t border-[#e4dbd0] p-5 lg:border-l lg:border-t-0">
+    <div className="grid lg:h-[min(60vh,46rem)] lg:grid-cols-[1fr_19rem]">
+      <div ref={node} className="h-[34rem] lg:h-full" aria-label="Mapa interactivo de adoraciones" />
+      <aside className="flex min-h-0 flex-col border-t border-[#e4dbd0] p-5 lg:h-full lg:border-l lg:border-t-0">
         <p className="text-xs font-bold uppercase tracking-[.16em] text-[#d96c4a]">Mapa 3D</p>
         <h3 className="mt-2 font-serif text-2xl text-[#20342c]">{selected.city}</h3>
         <p className="mt-4 text-sm font-bold text-[#254b3d]">{selected.parish}</p>
         <p className="mt-2 text-sm leading-6 text-[#5e6a63]">{selected.schedule}</p>
         <a href={directions} target="_blank" rel="noreferrer" className="mt-5 block rounded-full bg-[#254b3d] px-4 py-3 text-center text-sm font-bold text-white">Cómo llegar ↗</a>
-        <div className="mt-5 flex-1 space-y-1 overflow-y-auto border-t border-[#ece5dc] pt-4">{places.map((place) => <button type="button" onClick={() => void focus(place)} key={`${place.city}-${place.parish}`} className={`block w-full rounded-xl px-3 py-2 text-left text-xs font-semibold ${place === selected ? "bg-[#f1e8dc] text-[#254b3d]" : "text-[#66736b] hover:bg-[#f7f3ed]"}`}>{place.city} · {place.parish}</button>)}</div>
+        <div className="mt-5 min-h-0 flex-1 space-y-1 overflow-y-auto border-t border-[#ece5dc] pt-4">{places.map((place) => <button type="button" onClick={() => void focus(place)} key={`${place.city}-${place.parish}`} className={`block w-full rounded-xl px-3 py-2 text-left text-xs font-semibold ${place === selected ? "bg-[#f1e8dc] text-[#254b3d]" : "text-[#66736b] hover:bg-[#f7f3ed]"}`}>{place.city} · {place.parish}</button>)}</div>
       </aside>
     </div>
   </div>;
