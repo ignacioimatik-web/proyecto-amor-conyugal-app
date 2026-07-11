@@ -67,8 +67,7 @@ export default function Home() {
 
   return <main className="min-h-screen bg-[#f7f3ed] text-[#24342e]">
     <section className="mx-auto max-w-6xl px-5 pb-16 pt-5 sm:px-8">
-      <nav className="flex items-center justify-end py-3"><InternalMenu /></nav>
-      <a href="https://proyectoamorconyugal.es/" target="_blank" rel="noreferrer" className="mt-2 block overflow-hidden rounded-[1.75rem] bg-white shadow-sm ring-1 ring-[#e4dbd0] transition hover:shadow-md" aria-label="Proyecto Amor Conyugal, web oficial"><img src="/proyecto-amor-conyugal-logo.webp" alt="Proyecto Amor Conyugal" className="block h-auto w-full" /></a>
+      <a href="https://proyectoamorconyugal.es/" target="_blank" rel="noreferrer" className="mt-2 block overflow-hidden rounded-[1.75rem] bg-white shadow-sm ring-1 ring-[#e4dbd0] transition hover:shadow-md" aria-label="Proyecto Amor Conyugal, web oficial"><img src="/proyecto-amor-conyugal-logo.webp" alt="Proyecto Amor Conyugal" className="block h-auto w-full" /></a><InternalMenu />
 
       <div className="mt-10 grid items-start gap-10 lg:grid-cols-[.88fr_1.12fr] lg:gap-16">
         <div className="lg:sticky lg:top-8"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#d96c4a]">La Palabra cada día</p><h1 className="mt-4 font-serif text-5xl leading-[.98] tracking-tight text-[#20342c] sm:text-6xl">Tres años para volver a encontrarnos.</h1><p className="mt-6 max-w-md text-lg leading-8 text-[#5e6a63]">Elegid un día, leed el Evangelio despacio y dejaos mirar por el Señor.</p>
