@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import { AdorationMap } from "@/components/adoration-map";
 
 export const metadata: Metadata = {
   title: "Adoraciones",
@@ -24,6 +25,7 @@ export default function AdoracionesPage() {
               Santísimo Sacramento por la santidad y la unidad de las familias.
             </p>
           </div>
+          <AdorationMap places={mapPlaces} />
 
           {/* España */}
           <h2 className="mb-6 text-xl font-bold text-foreground gold-line">EN ESPAÑA</h2>
@@ -229,4 +231,17 @@ const world = [
       { name: "Miami", locations: ["Consultar parroquias adheridas"] },
     ],
   },
+];
+
+const mapPlaces = [
+  { city: "Madrid", parish: "Basílica de la Concepción", schedule: "Segundo jueves de mes, 21:00", coordinates: [-3.676, 40.430] as [number, number] },
+  { city: "Madrid", parish: "Santa María de Caná (Pozuelo)", schedule: "Último miércoles de mes (cada 3 meses), 20:40", coordinates: [-3.819, 40.436] as [number, number] },
+  { city: "Sevilla", parish: "Adoración mensual rotativa", schedule: "Consultar calendario mensual", coordinates: [-5.984, 37.389] as [number, number] },
+  { city: "Córdoba", parish: "Cristo Rey y Nuestra Señora del Valle", schedule: "Segundos lunes de mes, 20:30", coordinates: [-4.779, 37.884] as [number, number] },
+  { city: "Pamplona", parish: "Santa María la Esperanza", schedule: "Terceros jueves de mes", coordinates: [-1.645, 42.816] as [number, number] },
+  { city: "San Sebastián", parish: "San Ignacio de Gros", schedule: "Terceros viernes de mes, 20:30", coordinates: [-1.974, 43.321] as [number, number] },
+  { city: "Málaga", parish: "Adoración mensual rotativa", schedule: "Consultar calendario", coordinates: [-4.421, 36.721] as [number, number] },
+  { city: "Granada", parish: "Nuestra Señora de Gracia", schedule: "Primeros o segundos lunes de mes, 20:00", coordinates: [-3.599, 37.177] as [number, number] },
+  { city: "Zaragoza", parish: "Santa Rafaela María", schedule: "Primeros viernes de mes, 20:30", coordinates: [-0.889, 41.648] as [number, number] },
+  { city: "Valencia", parish: "Adoraciones por los matrimonios", schedule: "Consultar parroquia más cercana", coordinates: [-0.377, 39.470] as [number, number] },
 ];
