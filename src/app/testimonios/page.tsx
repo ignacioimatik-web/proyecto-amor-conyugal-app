@@ -1,96 +1,106 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Testimonios",
-  description: "Historias reales de parejas que han transformado su matrimonio. Testimonios de crisis, renovación, formación y misión.",
+  description:
+    "Testimonios reales de parejas que han transformado su matrimonio con la gracia de Dios. Descubre lo que Cristo ha hecho en sus vidas.",
 };
 
 const testimonials = [
   {
-    quote: "Dios nos encontró en la tormenta y nos devolvió la esperanza.",
-    names: "Ana y Pedro",
-    years: "14 años casados",
-    category: "Crisis",
-    featured: true,
+    title: "Hagan Lío",
+    description:
+      "«Hagan Lío #2» — La receta para vivir el AMOR VERDADERO en tu matrimonio.",
+    videoId: "0Mio4WxlUC4",
   },
   {
-    quote: "El retiro nos enseñó a escucharnos de verdad. Hoy somos más felices que el primer día.",
-    names: "María y José",
-    years: "23 años casados",
-    category: "Renovación",
-    featured: false,
+    title: "Presentación Taller Proyecto Amor Conyugal",
+    description:
+      "Una presentación completa del taller del Proyecto Amor Conyugal. Conoce el método que está transformando matrimonios.",
+    videoId: "om3iZDYbFA8",
   },
   {
-    quote: "Acompañar a otras parejas nos ha llenado el corazón. Ser misioneros es nuestro propósito.",
-    names: "Rosa y Carlos",
-    years: "31 años casados",
-    category: "Misión",
-    featured: false,
+    title: "Testimonio María & Álvaro",
+    description:
+      "María y Álvaro comparten cómo el Proyecto Amor Conyugal transformó su relación.",
+    videoId: "GY0egGQXG2s",
   },
   {
-    quote: "La formación nos dio herramientas para sanar heridas que creíamos irreparables.",
-    names: "Laura y Andrés",
-    years: "8 años casados",
-    category: "Formación",
-    featured: false,
+    title: "Testimonio Ana & Carlos",
+    description:
+      "Ana y Carlos nos cuentan su experiencia de renovación matrimonial.",
+    videoId: "kxar0DAxNQE",
+  },
+  {
+    title: "Testimonio Águeda & Alejandro",
+    description:
+      "Águeda y Alejandro testifican el poder de la gracia del sacramento del matrimonio.",
+    videoId: "bNXbsFmOcPw",
+  },
+  {
+    title: "Testimonio Nunchy & Arturo",
+    description:
+      "Nunchy y Arturo comparten su camino de conversión y amor renovado.",
+    videoId: "YA3_yhK7ccM",
+  },
+  {
+    title: "Testimonio Blanca & Néstor",
+    description:
+      "Blanca y Néstor nos cuentan cómo Dios restauró su matrimonio.",
+    videoId: "fK7ZRHbGUvM",
+  },
+  {
+    title: "Testimonio Mª Oliva y Miguel (Novios)",
+    description:
+      "Mª Oliva y Miguel, en su etapa de noviazgo, descubren la vocación matrimonial.",
+    videoId: "-f1x8dxZsSw",
   },
 ];
 
-export default function TestimonialsPage() {
+export default function TestimoniosPage() {
   return (
     <>
       <PageHero
         title="Testimonios"
-        description="Historias reales de parejas que han transformado su matrimonio."
+        description="El testimonio ha sido el medio preferido para el Señor para dar a conocer su obra."
       />
 
       <section className="py-12 lg:py-16">
-        <div className="container-wide mx-auto px-4 lg:px-6">
-          <div className="grid gap-6 sm:grid-cols-2">
-            {testimonials.map((t) => (
-              <article
-                key={t.names}
-                className={`rounded-xl border p-6 transition-all hover:shadow-sm ${
-                  t.featured
-                    ? "border-primary-light bg-primary-light/10 ring-1 ring-primary-light sm:col-span-2"
-                    : "border-border bg-surface"
-                }`}
-              >
-                {t.featured && (
-                  <span className="mb-3 inline-block rounded-full bg-primary-light/50 px-3 py-1 text-xs font-medium text-primary-dark">
-                    Testimonio Destacado
-                  </span>
-                )}
-                <blockquote className="text-lg italic leading-relaxed text-foreground">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="mt-4 flex items-center justify-between text-sm text-muted">
-                  <span className="font-medium">{t.names}</span>
-                  <span>{t.years}</span>
-                </div>
-              </article>
-            ))}
+        <div className="container-narrow mx-auto px-4 lg:px-6">
+          {/* Intro */}
+          <div className="mb-10 rounded-xl bg-surface-alt p-6 sm:p-8">
+            <p className="text-base leading-relaxed text-muted">
+              Nosotros tenemos claro que no somos ejemplo de nada, que sólo somos testigos de lo
+              que <strong className="text-foreground">CRISTO</strong> ha hecho en nuestro matrimonio,
+              de la mano de nuestra Madre en nuestra vida. Son muchos los que después de haber
+              conocido en profundidad su sacramento, están experimentando la{" "}
+              <strong className="text-foreground">VERDAD</strong> del amor en su matrimonio y en su
+              familia. Cambiando la lógica del mundo, por la lógica de Dios. Viviendo el matrimonio
+              como <strong className="text-foreground">DIOS LO PENSÓ</strong>.
+            </p>
           </div>
 
-          {/* Link to Before/After Slider */}
-          <div className="mt-10 text-center">
-            <Link
-              href="/testimonios/antes-despues"
-              className="group inline-flex items-center gap-3 rounded-xl border border-primary-light bg-surface px-8 py-4 transition-all hover:border-primary hover:shadow-md"
-            >
-              <span className="text-2xl">🔄</span>
-              <div className="text-left">
-                <p className="font-semibold text-foreground group-hover:text-primary">
-                  Antes y Después
-                </p>
-                <p className="text-sm text-muted">
-                  Historias interactivas de transformación — desliza para ver el cambio
-                </p>
-              </div>
-              <span className="text-xl text-muted-light group-hover:text-primary">→</span>
-            </Link>
+          {/* Videos Grid */}
+          <div className="grid gap-8 sm:grid-cols-2">
+            {testimonials.map((t) => (
+              <article
+                key={t.title}
+                className="rounded-xl border border-border bg-surface p-4 transition-all hover:shadow-sm sm:p-6"
+              >
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${t.videoId}`}
+                    title={t.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="h-full w-full"
+                  />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">{t.title}</h3>
+                <p className="mt-2 text-sm text-muted">{t.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

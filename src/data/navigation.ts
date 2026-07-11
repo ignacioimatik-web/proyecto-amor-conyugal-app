@@ -9,9 +9,9 @@ export const headerNav: NavItem[] = [
   { label: "Retiros", href: "/retiros" },
   { label: "Formación", href: "/formacion" },
   { label: "Testimonios", href: "/testimonios" },
-  { label: "Experiencias", href: "/camino-conyugal" },
   { label: "Adoraciones", href: "/adoraciones" },
   { label: "Misiones", href: "/misiones" },
+  { label: "Qué Ofrecemos", href: "/que-ofrecemos" },
 ];
 
 export const mobileNav: NavItem[] = [
@@ -36,17 +36,14 @@ export const mobileNav: NavItem[] = [
     href: "/formacion",
     children: [
       { label: "Todos los Recursos", href: "/formacion" },
-      { label: "Comunicación", href: "/formacion" },
-      { label: "Espiritualidad", href: "/formacion" },
-      { label: "Sexualidad", href: "/formacion" },
-      { label: "Finanzas", href: "/formacion" },
-      { label: "Crianza", href: "/formacion" },
+      { label: "Catequesis SJPII", href: "/formacion#catequesis" },
     ],
   },
   { label: "Testimonios", href: "/testimonios" },
   { label: "Adoraciones", href: "/adoraciones" },
   { label: "Misiones", href: "/misiones" },
-  { label: "Itinerario Matrimonial", href: "/camino-conyugal" },
+  { label: "Qué Ofrecemos", href: "/que-ofrecemos" },
+  { label: "Colabora", href: "/colabora" },
   { label: "Acerca de", href: "/acerca" },
   { label: "Contacto", href: "/contacto" },
   { label: "Aviso Legal", href: "/legal" },
@@ -62,7 +59,7 @@ export const footerColumns: FooterColumn[] = [
     title: "Evangelio",
     links: [
       { label: "Evangelio de Hoy", href: "/evangelio" },
-      { label: "Itinerario Matrimonial", href: "/formacion" },
+      { label: "Camino Conyugal", href: "/camino-conyugal" },
     ],
   },
   {
@@ -80,6 +77,7 @@ export const footerColumns: FooterColumn[] = [
       { label: "Retiros", href: "/retiros" },
       { label: "Formación", href: "/formacion" },
       { label: "Adoraciones", href: "/adoraciones" },
+      { label: "Qué Ofrecemos", href: "/que-ofrecemos" },
     ],
   },
   {
@@ -87,6 +85,7 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "Testimonios", href: "/testimonios" },
       { label: "Misiones", href: "/misiones" },
+      { label: "Colabora", href: "/colabora" },
       { label: "Contacto", href: "/contacto" },
       { label: "Acerca de", href: "/acerca" },
     ],
