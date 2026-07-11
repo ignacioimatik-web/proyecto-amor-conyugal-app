@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-type Place = { city: string; parish: string; schedule: string; coordinates: [number, number]; query: string };
+type Place = { city: string; parish: string; schedule: string; coordinates: [number, number]; query: string; verifiedAddress?: string };
 
 const token = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
@@ -37,6 +37,12 @@ export function AdorationMap({ places }: { places: Place[] }) {
     setAddress("Buscando dirección real…");
     setDestination(null);
     mapRef.current?.flyTo({ center: place.coordinates, zoom: 14.5, pitch: 62, bearing: -20, essential: true });
+    if (place.verifiedAddress) {
+      setAddress(place.verifiedAddress);
+      setDestination(place.coordinates);
+      mapRef.current?.flyTo({ center: place.coordinates, zoom: 16, pitch: 65, bearing: -22, essential: true });
+      return;
+    }
     try {
       const query = place.query.replace(/^Vicaría[^—]*—\s*/, "");
       const suggest = await fetch(`https://api.mapbox.com/search/searchbox/v1/suggest?q=${encodeURIComponent(query)}&limit=1&session_token=${searchSession.current}&access_token=${token}`);

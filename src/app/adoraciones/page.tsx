@@ -234,4 +234,7 @@ const world = [
 ];
 
 const cityCoordinates: Record<string, [number, number]> = { Madrid: [-3.704, 40.417], Sevilla: [-5.984, 37.389], Córdoba: [-4.779, 37.884], Pamplona: [-1.645, 42.816], "San Sebastián": [-1.974, 43.321], Zumárraga: [-2.023, 43.088], Málaga: [-4.421, 36.721], Mallorca: [2.650, 39.570], Granada: [-3.599, 37.177], Zaragoza: [-0.889, 41.648], Toledo: [-4.027, 39.862], Valladolid: [-4.724, 41.652], Valencia: [-0.377, 39.470], Almería: [-2.463, 36.835] };
-const mapPlaces = spainCities.flatMap((city) => city.locations.map((location) => ({ city: city.name, parish: location.parish, schedule: location.schedule, coordinates: cityCoordinates[city.name] ?? [-3.704, 40.417], query: `${location.parish}, ${city.name}, España` })));
+const mapPlaces = spainCities.flatMap((city) => city.locations.map((location) => {
+  const moraleja = location.parish.includes("Ntra. Sra. de la Moraleja");
+  return { city: city.name, parish: location.parish, schedule: location.schedule, coordinates: moraleja ? [-3.636413, 40.530622] as [number, number] : cityCoordinates[city.name] ?? [-3.704, 40.417], query: moraleja ? "Parroquia Nuestra Señora de la Moraleja, Calle Nardo 44, 28109 Alcobendas" : `${location.parish}, ${city.name}, España`, verifiedAddress: moraleja ? "Calle del Nardo, 44 · 28109 Alcobendas, Madrid" : undefined };
+}));
