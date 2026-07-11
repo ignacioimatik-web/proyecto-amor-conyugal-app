@@ -22,6 +22,7 @@ function publicPost(post: WordPressPost) {
     title: stripHtml(post.title.rendered),
     date: post.date.slice(0, 10),
     excerpt: stripHtml(post.excerpt.rendered).slice(0, 240),
+    content: stripHtml(post.content.rendered).slice(0, 12000),
     link: post.link,
     audio,
   };
