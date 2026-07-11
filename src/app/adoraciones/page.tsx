@@ -233,15 +233,5 @@ const world = [
   },
 ];
 
-const mapPlaces = [
-  { city: "Madrid", parish: "Basílica de la Concepción", schedule: "Segundo jueves de mes, 21:00", coordinates: [-3.676, 40.430] as [number, number] },
-  { city: "Madrid", parish: "Santa María de Caná (Pozuelo)", schedule: "Último miércoles de mes (cada 3 meses), 20:40", coordinates: [-3.819, 40.436] as [number, number] },
-  { city: "Sevilla", parish: "Adoración mensual rotativa", schedule: "Consultar calendario mensual", coordinates: [-5.984, 37.389] as [number, number] },
-  { city: "Córdoba", parish: "Cristo Rey y Nuestra Señora del Valle", schedule: "Segundos lunes de mes, 20:30", coordinates: [-4.779, 37.884] as [number, number] },
-  { city: "Pamplona", parish: "Santa María la Esperanza", schedule: "Terceros jueves de mes", coordinates: [-1.645, 42.816] as [number, number] },
-  { city: "San Sebastián", parish: "San Ignacio de Gros", schedule: "Terceros viernes de mes, 20:30", coordinates: [-1.974, 43.321] as [number, number] },
-  { city: "Málaga", parish: "Adoración mensual rotativa", schedule: "Consultar calendario", coordinates: [-4.421, 36.721] as [number, number] },
-  { city: "Granada", parish: "Nuestra Señora de Gracia", schedule: "Primeros o segundos lunes de mes, 20:00", coordinates: [-3.599, 37.177] as [number, number] },
-  { city: "Zaragoza", parish: "Santa Rafaela María", schedule: "Primeros viernes de mes, 20:30", coordinates: [-0.889, 41.648] as [number, number] },
-  { city: "Valencia", parish: "Adoraciones por los matrimonios", schedule: "Consultar parroquia más cercana", coordinates: [-0.377, 39.470] as [number, number] },
-];
+const cityCoordinates: Record<string, [number, number]> = { Madrid: [-3.704, 40.417], Sevilla: [-5.984, 37.389], Córdoba: [-4.779, 37.884], Pamplona: [-1.645, 42.816], "San Sebastián": [-1.974, 43.321], Zumárraga: [-2.023, 43.088], Málaga: [-4.421, 36.721], Mallorca: [2.650, 39.570], Granada: [-3.599, 37.177], Zaragoza: [-0.889, 41.648], Toledo: [-4.027, 39.862], Valladolid: [-4.724, 41.652], Valencia: [-0.377, 39.470], Almería: [-2.463, 36.835] };
+const mapPlaces = spainCities.flatMap((city) => city.locations.map((location) => ({ city: city.name, parish: location.parish, schedule: location.schedule, coordinates: cityCoordinates[city.name] ?? [-3.704, 40.417], query: `${location.parish}, ${city.name}, España` })));
