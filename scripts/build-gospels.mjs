@@ -40,6 +40,6 @@ writeFileSync("src/data/gospels-rv1909.json", JSON.stringify(output));
 
 mkdirSync("public", { recursive: true });
 writeFileSync(
-  "public/proyecto-amor-conyugal-header.jpg",
+  "public/proyecto-amor-conyugal-logo.webp",
   Buffer.from(readFileSync("scripts/assets/proyecto-amor-conyugal-logo.b64", "utf8").replace(/\s/g, ""), "base64"),
 );

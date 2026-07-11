@@ -16,7 +16,7 @@ export default function PageHero({ title, description, breadcrumb }: PageHeroPro
           <InternalMenu />
         </nav>
         <Link href="/" className="block overflow-hidden rounded-[1.75rem] bg-white shadow-sm ring-1 ring-[#e4dbd0]" aria-label="Volver al inicio">
-          <img src="/proyecto-amor-conyugal-header.jpg" alt="Proyecto Amor Conyugal" className="block h-auto w-full" />
+          <img src="/proyecto-amor-conyugal-logo.webp" alt="Proyecto Amor Conyugal" className="block h-auto w-full" />
         </Link>
       </section>
       <section className="mx-auto mt-8 max-w-6xl border-y border-[#e2dbd0] bg-[#fffaf3] px-5 sm:px-8">
