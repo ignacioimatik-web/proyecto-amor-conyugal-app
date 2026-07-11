@@ -18,7 +18,7 @@ export default function AdoracionesPage() {
 
       <section className="py-12 lg:py-16">
         <div className="container-wide mx-auto px-4 lg:px-6">
-          <div className="mb-8 max-w-3xl">
+          <div className="mb-8 mx-auto max-w-3xl text-center">
             <p className="text-sm leading-relaxed text-muted">
               La adoración eucarística es un momento privilegiado de encuentro con Jesús. En
               parroquias de toda España y del mundo, matrimonios se reúnen para orar ante el
