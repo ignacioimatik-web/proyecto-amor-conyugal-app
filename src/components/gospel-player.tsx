@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function GospelPlayer({ text }: { text: string }) {
   const audio = useRef<HTMLAudioElement | null>(null);
@@ -9,20 +9,30 @@ export function GospelPlayer({ text }: { text: string }) {
   const [playing, setPlaying] = useState(false);
   const [error, setError] = useState("");
 
-  async function play() {
-    setError("");
-    if (audio.current) { await audio.current.play(); return; }
+  async function prepare(): Promise<HTMLAudioElement | null> {
+    if (audio.current) return audio.current;
+    if (loading) return null;
     setLoading(true);
     try {
       const response = await fetch("/api/evangelio-audio", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text }) });
       if (!response.ok) throw new Error();
       url.current = URL.createObjectURL(await response.blob());
       const player = new Audio(url.current);
+      player.preload = "auto";
       player.onplay = () => setPlaying(true); player.onpause = () => setPlaying(false); player.onended = () => setPlaying(false);
       audio.current = player;
-      await player.play();
-    } catch { setError("No se ha podido preparar el audio."); }
+      return player;
+    } catch { setError("No se ha podido preparar el audio."); return null; }
     finally { setLoading(false); }
+  }
+
+  useEffect(() => { void prepare(); return () => { audio.current?.pause(); if (url.current) URL.revokeObjectURL(url.current); }; }, [text]);
+
+  async function play() {
+    setError("");
+    if (audio.current) { await audio.current.play(); return; }
+    const player = await prepare();
+    await player?.play();
   }
   function pause() { audio.current?.pause(); }
   function restart() { if (!audio.current) { void play(); return; } audio.current.currentTime = 0; void audio.current.play(); }
