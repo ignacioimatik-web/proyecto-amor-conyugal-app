@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   if (!key) return NextResponse.json({ error: "El narrador está configurándose." }, { status: 503 });
   const { text } = await request.json() as { text?: string };
   if (!text || text.length > 15000) return NextResponse.json({ error: "Texto no válido." }, { status: 400 });
-  const response = await fetch("https://api.deepgram.com/v1/speak?model=aura-2-celeste-es&speed=0.92", {
+  const response = await fetch("https://api.deepgram.com/v1/speak?model=aura-2-nestor-es&speed=0.92", {
     method: "POST",
     headers: { Authorization: `Token ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({ text }),
