@@ -1,7 +1,7 @@
 export const menuItems = [
   ["Inicio", "/"],
-  ["Misiones y noticias", "/misiones"],
-  ["Formación conyugal", "/formacion"],
+  ["Misiones", "/misiones"],
+  ["Formación", "/formacion"],
   ["Acerca de", "/acerca"],
   ["Contacto", "/contacto"],
   ["Testimonios", "/testimonios"],
