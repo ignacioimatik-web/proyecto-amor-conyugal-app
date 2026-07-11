@@ -16,6 +16,10 @@ function stripHtml(value: string) {
     .trim();
 }
 
+function readingHtml(value: string) {
+  return value.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "").replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "").replace(/<iframe[^>]*>[\s\S]*?<\/iframe>/gi, "").replace(/<img[^>]*>/gi, "").replace(/\son\w+=("[^"]*"|'[^']*'|[^\s>]+)/gi, "").replace(/\sstyle=("[^"]*"|'[^']*'|[^\s>]+)/gi, "").replace(/<a\b([^>]*)>/gi, '<a$1 target="_blank" rel="noreferrer">');
+}
+
 function publicPost(post: WordPressPost) {
   const audio = post.content.rendered.match(/https?:[^"'\s<>]+\.mp3[^"'\s<>]*/i)?.[0]?.replace(/&amp;/g, "&") ?? null;
   return {
@@ -23,6 +27,7 @@ function publicPost(post: WordPressPost) {
     date: post.date.slice(0, 10),
     excerpt: stripHtml(post.excerpt.rendered).slice(0, 240),
     content: stripHtml(post.content.rendered).slice(0, 12000),
+    contentHtml: readingHtml(post.content.rendered),
     link: post.link,
     audio,
   };

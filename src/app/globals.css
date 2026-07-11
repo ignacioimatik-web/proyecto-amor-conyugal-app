@@ -243,3 +243,11 @@ body {
   border-color: var(--color-primary-dark);
   color: white;
 }
+
+.reflection-reading { color: #405148; font-size: 1rem; line-height: 1.85; }
+.reflection-reading p { margin: 0 0 1.15rem; }
+.reflection-reading h2, .reflection-reading h3 { color: #254b3d; font-family: Georgia, "Times New Roman", serif; line-height: 1.2; margin: 2rem 0 .8rem; }
+.reflection-reading h2 { font-size: 1.55rem; }.reflection-reading h3 { font-size: 1.25rem; }
+.reflection-reading blockquote { border-left: 3px solid #d96c4a; color: #385448; font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; line-height: 1.6; margin: 1.5rem 0; padding-left: 1rem; }
+.reflection-reading ul, .reflection-reading ol { margin: 1rem 0 1.25rem; padding-left: 1.4rem; }.reflection-reading li { margin: .45rem 0; }
+.reflection-reading a { color: #b95638; font-weight: 700; text-decoration: underline; }
