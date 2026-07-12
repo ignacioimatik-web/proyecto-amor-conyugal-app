@@ -36,6 +36,12 @@ function ceeUrl(date: string) {
   return `https://www.conferenciaepiscopal.es/?cid=mc-948a6a8e8cd15db324902317a630b853&dy=${Number(day)}&format=list&mcat=1&month=${month}&time=day&tmpl=component&yr=${year}`;
 }
 
+function madridToday() {
+  const values = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Madrid", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
+  const get = (type: string) => values.find((part) => part.type === type)?.value ?? "";
+  return `${get("year")}-${get("month")}-${get("day")}`;
+}
+
 export default function Home() {
   const [date, setDate] = useState(START);
   const [reading, setReading] = useState<Reading | null>(null);
@@ -43,6 +49,11 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [saved, setSaved] = useState(false);
   const [official, setOfficial] = useState<OfficialContent | null>(null);
+
+  useEffect(() => {
+    const today = madridToday();
+    if (today >= START && today <= END) setDate(today);
+  }, []);
 
   useEffect(() => {
     const controller = new AbortController();
