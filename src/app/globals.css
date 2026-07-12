@@ -40,10 +40,12 @@
 /* ── Base Styles ── */
 
 body {
-  background: var(--color-background);
+  background: #74c9be;
   color: var(--color-foreground);
   font-family: var(--font-sans);
 }
+
+main { background-color: #e5f5f2 !important; }
 
 /* ── Utility classes ── */
 

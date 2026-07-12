@@ -16,9 +16,9 @@ const START = "2026-07-11";
 const END = "2029-07-11";
 const DAY = 86_400_000;
 const officialPhotos = [
-  "https://proyectoamorconyugal.es/wp-content/uploads/2026/07/IMG-20260712-WA0000.jpg",
-  "https://proyectoamorconyugal.es/wp-content/uploads/2026/07/030625-holanda-2026-07-12T063530.157.png",
-  "https://proyectoamorconyugal.es/wp-content/uploads/2026/07/Portugal-2026-07-10T002504.558.png",
+  "/proyecto-amor-oficial-1.jpg",
+  "/proyecto-amor-oficial-2.png",
+  "/proyecto-amor-oficial-3.png",
 ];
 
 function addDays(date: string, amount: number) {
@@ -73,7 +73,7 @@ export default function Home() {
 
   return <main className="min-h-screen bg-[#f3f6f8] text-[#2e4858]">
     <section className="mx-auto max-w-6xl px-5 pb-16 pt-5 sm:px-8">
-      <a href="https://proyectoamorconyugal.es/" target="_blank" rel="noreferrer" className="mt-2 block overflow-hidden rounded-[1.75rem] bg-white shadow-sm ring-1 ring-[#d6e3ea] transition hover:shadow-md" aria-label="Proyecto Amor Conyugal, web oficial"><img src="/proyecto-amor-conyugal-logo.webp" alt="Proyecto Amor Conyugal" className="block h-auto w-full" /></a><InternalMenu /><div className="mt-4 grid grid-cols-3 gap-2 overflow-hidden rounded-2xl bg-[#dce7ed] p-2">{officialPhotos.map((photo, index) => <img key={photo} src={photo} referrerPolicy="no-referrer" alt={`Proyecto Amor Conyugal · imagen ${index + 1}`} className="h-20 w-full rounded-xl object-cover sm:h-28" />)}</div>
+      <a href="https://proyectoamorconyugal.es/" target="_blank" rel="noreferrer" className="mt-2 block overflow-hidden rounded-[1.75rem] bg-white shadow-sm ring-1 ring-[#c5e6e1] transition hover:shadow-md" aria-label="Proyecto Amor Conyugal, web oficial"><img src="/proyecto-amor-conyugal-logo.webp" alt="Proyecto Amor Conyugal" className="block h-auto w-full" /></a><InternalMenu /><div className="mt-4 grid grid-cols-3 gap-2 overflow-hidden rounded-2xl bg-[#d9f1ed] p-2">{officialPhotos.map((photo, index) => <img key={photo} src={photo} alt={`Proyecto Amor Conyugal · imagen ${index + 1}`} className="h-20 w-full rounded-xl object-cover shadow-sm sm:h-28" />)}</div>
 
       <div className="mt-10 grid items-start gap-10 lg:grid-cols-[.88fr_1.12fr] lg:gap-16">
         <div className="lg:sticky lg:top-8"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#7894a8]">La Palabra cada día</p><h1 className="mt-4 font-serif text-5xl leading-[.98] tracking-tight text-[#3e6078] sm:text-6xl">Tres años para volver a encontrarnos.</h1><p className="mt-6 max-w-md text-lg leading-8 text-[#5e6f7a]">Elegid un día, leed el Evangelio despacio y dejaos mirar por el Señor.</p>

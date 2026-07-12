@@ -43,3 +43,16 @@ writeFileSync(
   "public/proyecto-amor-conyugal-logo.webp",
   Buffer.from(readFileSync("scripts/assets/proyecto-amor-conyugal-logo.b64", "utf8").replace(/\s/g, ""), "base64"),
 );
+
+const officialImages = [
+  ["https://proyectoamorconyugal.es/wp-content/uploads/2026/07/IMG-20260712-WA0000.jpg", "public/proyecto-amor-oficial-1.jpg"],
+  ["https://proyectoamorconyugal.es/wp-content/uploads/2026/07/030625-holanda-2026-07-12T063530.157.png", "public/proyecto-amor-oficial-2.png"],
+  ["https://proyectoamorconyugal.es/wp-content/uploads/2026/07/Portugal-2026-07-10T002504.558.png", "public/proyecto-amor-oficial-3.png"],
+];
+for (const [url, file] of officialImages) {
+  if (!existsSync(file)) {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`No se pudo descargar una imagen oficial: ${url}`);
+    writeFileSync(file, Buffer.from(await response.arrayBuffer()));
+  }
+}
