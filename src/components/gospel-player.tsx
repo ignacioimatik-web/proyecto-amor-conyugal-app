@@ -26,7 +26,15 @@ export function GospelPlayer({ text }: { text: string }) {
     finally { setLoading(false); }
   }
 
-  useEffect(() => { void prepare(); return () => { audio.current?.pause(); if (url.current) URL.revokeObjectURL(url.current); }; }, [text]);
+  useEffect(() => {
+    void prepare();
+    return () => {
+      audio.current?.pause();
+      audio.current = null;
+      if (url.current) URL.revokeObjectURL(url.current);
+      url.current = null;
+    };
+  }, [text]);
 
   async function play() {
     setError("");
@@ -45,6 +53,7 @@ export function GospelPlayer({ text }: { text: string }) {
       <button onClick={restart} className="rounded-full border border-[#d7cec2] px-3 py-2 text-xs font-bold">↺ Reiniciar</button>
       <button onClick={stop} disabled={!audio.current} className="rounded-full border border-[#d7cec2] px-3 py-2 text-xs font-bold disabled:opacity-40">■ Detener</button>
     </div>
-    {error && <p className="mt-2 text-xs text-[#9b4531]">{error}</p>}
+    {!loading && !error && !audio.current && <p className="mt-2 text-xs text-[#68736b]">Preparando la voz de Carina…</p>}
+    {error && <p className="mt-2 text-xs text-[#9b4531]">{error} Puedes volver a pulsar “Escuchar” para reintentarlo.</p>}
   </div>;
 }
