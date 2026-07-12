@@ -16,7 +16,7 @@ export default function PageHero({ title, description, breadcrumb }: PageHeroPro
         </Link>
         <InternalMenu />
       </section>
-      <section className="mx-auto mt-8 max-w-6xl border-y border-[#e2dbd0] bg-[#fffaf3] px-5 sm:px-8">
+      <section className="mx-auto mt-8 max-w-6xl border-y border-[#cce9e4] bg-[#eaf7f5] px-5 sm:px-8">
       <div className="container-wide mx-auto px-0 py-10 lg:px-0 lg:py-14">
         {breadcrumb && breadcrumb.length > 0 && (
           <nav className="mb-4 text-sm text-muted" aria-label="Migas de pan">
@@ -33,8 +33,8 @@ export default function PageHero({ title, description, breadcrumb }: PageHeroPro
             ))}
           </nav>
         )}
-        <p className="text-xs font-bold uppercase tracking-[.2em] text-[#d96c4a]">Caminar juntos</p>
-        <h1 className="mt-3 font-serif text-4xl tracking-tight text-[#20342c] sm:text-5xl lg:text-6xl">
+        <p className="text-xs font-bold uppercase tracking-[.2em] text-[#4d9e96]">Caminar juntos</p>
+        <h1 className="mt-3 font-serif text-4xl tracking-tight text-[#397987] sm:text-5xl lg:text-6xl">
           {title}
         </h1>
         {description && (

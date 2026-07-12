@@ -12,12 +12,12 @@ export function InternalMenu() {
   return <nav className="relative mt-3 pb-1" aria-label="Secciones del proyecto">
     <div className="overflow-x-auto pr-24">
       <div className="flex min-w-max items-end gap-1 rounded-2xl border border-[#d8d1c7] bg-[#fffdf9] px-2 pt-2 shadow-sm">
-        <span className="mb-0.5 hidden items-center gap-1.5 rounded-t-lg bg-[#254b3d] px-3 py-2 text-[10px] font-bold uppercase tracking-[.14em] text-white sm:flex"><span className="h-2.5 w-3.5 rounded-sm border border-white/70" />Proyecto</span>
-        {primaryItems.map(([label, href]) => <Link key={href} href={href} className={`rounded-t-xl px-3 py-2.5 text-xs font-bold transition sm:text-sm ${pathname === href ? "bg-[#254b3d] text-white" : "bg-[#f1e8dc] text-[#46554c] hover:bg-[#e5d9cc]"}`}>{label}</Link>)}
+        <span className="mb-0.5 hidden items-center gap-1.5 rounded-t-lg bg-[#397987] px-3 py-2 text-[10px] font-bold uppercase tracking-[.14em] text-white sm:flex"><span className="h-2.5 w-3.5 rounded-sm border border-white/70" />Proyecto</span>
+        {primaryItems.map(([label, href]) => <Link key={href} href={href} className={`rounded-t-xl px-3 py-2.5 text-xs font-bold transition sm:text-sm ${pathname === href ? "bg-[#397987] text-white" : "bg-[#e1f4f1] text-[#356b73] hover:bg-[#d0ebe6]"}`}>{label}</Link>)}
       </div>
     </div>
     <details className="group absolute right-2 top-2 z-40">
-      <summary className={`flex cursor-pointer list-none items-center gap-1 rounded-t-xl px-3 py-2.5 text-xs font-bold shadow-sm transition sm:text-sm ${secondaryItems.some(([, href]) => pathname === href) ? "bg-[#254b3d] text-white" : "bg-[#d96c4a] text-white hover:bg-[#b95638]"}`}>
+      <summary className={`flex cursor-pointer list-none items-center gap-1 rounded-t-xl px-3 py-2.5 text-xs font-bold shadow-sm transition sm:text-sm ${secondaryItems.some(([, href]) => pathname === href) ? "bg-[#397987] text-white" : "bg-[#74c9be] text-[#214c56] hover:bg-[#5bb6aa]"}`}>
         Contacto <span className="text-base font-normal leading-none transition group-open:rotate-45">+</span>
       </summary>
       <div className="absolute right-0 z-50 mt-1 min-w-48 overflow-hidden rounded-2xl border border-[#d8d1c7] bg-[#fffdf9] p-1.5 shadow-2xl shadow-[#203f34]/20">
