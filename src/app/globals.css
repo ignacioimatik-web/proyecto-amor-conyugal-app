@@ -45,7 +45,10 @@ body {
   font-family: var(--font-sans);
 }
 
-main { background-color: #e5f5f2 !important; }
+html, body { background: #74c9be; }
+main { background-color: #74c9be !important; }
+main > section { background-color: transparent !important; }
+main > footer { background-color: #63b8ae; }
 
 /* ── Utility classes ── */
 
