@@ -7,15 +7,15 @@
  */
 
 @theme inline {
-  --color-background: #f7f3ed;
-  --color-foreground: #24342e;
-  --color-primary: #d96c4a;
-  --color-primary-dark: #b95638;
-  --color-primary-light: #f1d8cd;
+  --color-background: #f3f6f8;
+  --color-foreground: #2e4858;
+  --color-primary: #7894a8;
+  --color-primary-dark: #5b778c;
+  --color-primary-light: #dce7ed;
 
-  --color-secondary: #254b3d;
-  --color-accent: #d96c4a;
-  --color-accent-light: #fbebe6;
+  --color-secondary: #4f7087;
+  --color-accent: #7894a8;
+  --color-accent-light: #e3edf2;
 
   --color-surface: #fffdf9;
   --color-surface-alt: #fffaf3;

@@ -15,6 +15,11 @@ type OfficialContent = { commentaries: OfficialPost[]; retreats: { upcoming: Ret
 const START = "2026-07-11";
 const END = "2029-07-11";
 const DAY = 86_400_000;
+const officialPhotos = [
+  "https://proyectoamorconyugal.es/wp-content/uploads/2026/07/IMG-20260712-WA0000.jpg",
+  "https://proyectoamorconyugal.es/wp-content/uploads/2026/07/030625-holanda-2026-07-12T063530.157.png",
+  "https://proyectoamorconyugal.es/wp-content/uploads/2026/07/Portugal-2026-07-10T002504.558.png",
+];
 
 function addDays(date: string, amount: number) {
   const value = new Date(`${date}T12:00:00`);
@@ -66,20 +71,20 @@ export default function Home() {
   const previous = date > START ? addDays(date, -1) : null;
   const next = date < END ? addDays(date, 1) : null;
 
-  return <main className="min-h-screen bg-[#f7f3ed] text-[#24342e]">
+  return <main className="min-h-screen bg-[#f3f6f8] text-[#2e4858]">
     <section className="mx-auto max-w-6xl px-5 pb-16 pt-5 sm:px-8">
       <a href="https://proyectoamorconyugal.es/" target="_blank" rel="noreferrer" className="mt-2 block overflow-hidden rounded-[1.75rem] bg-white shadow-sm ring-1 ring-[#e4dbd0] transition hover:shadow-md" aria-label="Proyecto Amor Conyugal, web oficial"><img src="/proyecto-amor-conyugal-logo.webp" alt="Proyecto Amor Conyugal" className="block h-auto w-full" /></a><InternalMenu />
 
       <div className="mt-10 grid items-start gap-10 lg:grid-cols-[.88fr_1.12fr] lg:gap-16">
-        <div className="lg:sticky lg:top-8"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#d96c4a]">La Palabra cada día</p><h1 className="mt-4 font-serif text-5xl leading-[.98] tracking-tight text-[#20342c] sm:text-6xl">Tres años para volver a encontrarnos.</h1><p className="mt-6 max-w-md text-lg leading-8 text-[#5e6a63]">Elegid un día, leed el Evangelio despacio y dejaos mirar por el Señor.</p>
+        <div className="lg:sticky lg:top-8"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#7894a8]">La Palabra cada día</p><h1 className="mt-4 font-serif text-5xl leading-[.98] tracking-tight text-[#3e6078] sm:text-6xl">Tres años para volver a encontrarnos.</h1><p className="mt-6 max-w-md text-lg leading-8 text-[#5e6f7a]">Elegid un día, leed el Evangelio despacio y dejaos mirar por el Señor.</p>
           <p className="mt-9 text-xs font-bold uppercase tracking-[.16em] text-[#66736b]">Evangelio para matrimonios · 2026 — 2029</p><div className="mt-3 rounded-3xl border border-[#e4dbd0] bg-[#fffdf9] p-5 shadow-sm"><label className="block text-xs font-bold uppercase tracking-[.15em] text-[#8a847c]" htmlFor="date">Elegir fecha</label><input id="date" value={date} min={START} max={END} onChange={(e) => setDate(e.target.value)} type="date" className="mt-3 w-full rounded-2xl border border-[#dbd3c8] bg-white px-4 py-3 text-sm font-semibold outline-none focus:border-[#d96c4a]" />
             <div className="mt-4 flex gap-2"><button disabled={!previous} onClick={() => previous && setDate(previous)} className="flex-1 rounded-xl border border-[#ddd5ca] py-2 text-sm disabled:opacity-35">← Anterior</button><button disabled={!next} onClick={() => next && setDate(next)} className="flex-1 rounded-xl border border-[#ddd5ca] py-2 text-sm disabled:opacity-35">Siguiente →</button></div>
             <div className="mt-5"><div className="flex justify-between text-xs text-[#7a817c]"><span>Camino disponible</span><span>{progress}%</span></div><div className="mt-2 h-1.5 overflow-hidden rounded-full bg-[#ece5dc]"><div className="h-full rounded-full bg-[#d96c4a]" style={{ width: `${Math.max(1, progress)}%` }} /></div></div>
           </div>
-          <div className="mt-7 rounded-3xl bg-[#254b3d] p-6 text-[#fffaf2]"><p className="text-xs font-bold tracking-[.18em] text-[#c3d5c9]">UN RITUAL SENCILLO</p><ol className="mt-4 space-y-3 text-sm leading-6 text-[#dce8df]"><li><b className="text-white">01</b> Leed el texto sin prisa.</li><li><b className="text-white">02</b> Compartid qué palabra os toca.</li><li><b className="text-white">03</b> Terminad con una oración breve.</li></ol></div>
+          <div className="mt-7 rounded-3xl bg-[#4f7087] p-6 text-[#fffaf2]"><p className="text-xs font-bold tracking-[.18em] text-[#dce7ed]">UN RITUAL SENCILLO</p><ol className="mt-4 space-y-3 text-sm leading-6 text-[#eef4f7]"><li><b className="text-white">01</b> Leed el texto sin prisa.</li><li><b className="text-white">02</b> Compartid qué palabra os toca.</li><li><b className="text-white">03</b> Terminad con una oración breve.</li></ol></div>
         </div>
 
-        <article className="overflow-hidden rounded-[2.3rem] border border-[#e6ddd2] bg-[#fffdf9] shadow-xl shadow-[#2d4638]/5"><div className="bg-[#254b3d] px-7 py-8 text-[#fffaf2] sm:px-10"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#c3d5c9]">Evangelio del día</p><h2 className="mt-3 font-serif text-3xl capitalize sm:text-4xl">{displayDate(date)}</h2>{reading && <p className="mt-4 text-sm text-[#d0dfd4]">{reading.celebration} · <b>{reading.gospel.reference}</b></p>}</div>
+        <article className="overflow-hidden rounded-[2.3rem] border border-[#dce7ed] bg-[#fffdf9] shadow-xl shadow-[#4f7087]/10"><div className="bg-[#4f7087] px-7 py-8 text-[#fffaf2] sm:px-10"><p className="text-xs font-bold uppercase tracking-[.2em] text-[#dce7ed]">Evangelio del día</p><h2 className="mt-3 font-serif text-3xl capitalize sm:text-4xl">{displayDate(date)}</h2>{reading && <p className="mt-4 text-sm text-[#e5eff3]">{reading.celebration} · <b>{reading.gospel.reference}</b></p>}</div>
           <div className="px-7 py-8 sm:px-10 sm:py-10">
             {loading && <div className="space-y-4"><div className="h-5 w-1/3 animate-pulse rounded bg-[#eee7de]" /><div className="h-4 animate-pulse rounded bg-[#f0ebe4]" /><div className="h-4 animate-pulse rounded bg-[#f0ebe4]" /><div className="h-4 w-4/5 animate-pulse rounded bg-[#f0ebe4]" /></div>}
             {error && <div className="rounded-2xl bg-[#fbebe6] p-5 text-sm leading-6 text-[#9b4531]">{error}</div>}
@@ -88,6 +93,7 @@ export default function Home() {
         </article>
       </div>
     </section>
+    <section className="mx-auto max-w-6xl px-5 pb-10 sm:px-8"><div className="rounded-[2rem] bg-[#e6eef2] p-5 sm:p-7"><div className="mb-5 flex items-end justify-between gap-4"><div><p className="text-xs font-bold uppercase tracking-[.18em] text-[#5b778c]">La comunidad en camino</p><h2 className="mt-2 font-serif text-3xl text-[#3e6078]">Imágenes de Proyecto Amor Conyugal</h2></div><a href="https://proyectoamorconyugal.es/" target="_blank" rel="noreferrer" className="text-xs font-bold text-[#5b778c] underline">Fuente oficial ↗</a></div><div className="grid gap-4 sm:grid-cols-3">{officialPhotos.map((photo, index) => <img key={photo} src={photo} alt={`Proyecto Amor Conyugal · imagen ${index + 1}`} className="h-44 w-full rounded-2xl object-cover shadow-sm" />)}</div></div></section>
     <section className="border-y border-[#e2dbd0] bg-[#fffaf3] py-16"><div className="mx-auto max-w-6xl px-5 sm:px-8"><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="text-xs font-bold uppercase tracking-[.2em] text-[#d96c4a]">En comunión con la fuente</p><h2 className="mt-3 font-serif text-4xl">Proyecto Amor Conyugal, hoy.</h2></div><a href="https://proyectoamorconyugal.es/" target="_blank" rel="noreferrer" className="rounded-full border border-[#d7cec2] bg-white px-5 py-3 text-sm font-bold">Visitar web oficial ↗</a></div>
       {!official && <div className="mt-9 grid gap-5 md:grid-cols-3">{[1, 2, 3].map((item) => <div key={item} className="h-44 animate-pulse rounded-3xl bg-[#f0e9df]" />)}</div>}
       {official && <><div className="mt-9">{official.commentaries[0] && <FeaturedReflection post={official.commentaries[0]} />}</div>{official.commentaries.length > 1 && <><p className="mt-8 text-xs font-bold uppercase tracking-[.16em] text-[#8b8176]">También esta semana</p><div className="mt-3 grid gap-5 md:grid-cols-2">{official.commentaries.slice(1).map((post) => <ReflectionCard key={post.link} post={post} />)}</div></>
